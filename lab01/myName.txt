@@ -1,0 +1,3 @@
+jacky
+And the command for lldb is 
+process launch -i <filename>
