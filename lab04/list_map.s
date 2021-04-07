@@ -37,6 +37,9 @@ map:
     ### YOUR CODE HERE ###
     addi sp, sp, -12
     sw  ra, 0(sp)
+
+    # Function of registers s0, s1 is to save the previous/original address of the node
+    # When node a0 has chenged its value to become the address of next node.
     sw  s0, 4(sp)
     sw  s1, 8(sp)
 
@@ -50,6 +53,7 @@ map:
 
     # load the value of the current node into a0
     # THINK: why a0?
+    # ANSWER: so the function of a0 is a pointer and iterate the Linked List.
     ### YOUR CODE HERE ###
     lw a0 0(s0) 
 
