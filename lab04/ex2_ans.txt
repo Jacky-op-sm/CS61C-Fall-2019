@@ -1,0 +1,22 @@
+1.The register representing the variable k.
+t0.
+
+2.The registers acting as pointers to the source and dest arrays.
+pointers to the source arrays: t1.
+pointers to the dest arrays: t2.
+But the actual moving point for them are t4, t6.
+
+3.The assembly code for the loop found in the C code.
+
+loop:
+    slli t3, t0, 2
+    add t4, t1, t3
+    lw t5, 0(t4)
+    beq t5, x0, exit
+    add t6, t2, t3
+    sw t5, 0(t6)
+    addi t0, t0, 1
+    jal x0, loop
+
+4.How the pointers are manipulated in the assembly code.
+T1, t2 are used as the constant address of the array. When k increases, the distance between the first element and Kth element is 4 * k, which is the function of this statement "slli t3, t0, 2". And then update the t4 and t6 by adding t3.
