@@ -1,0 +1,3 @@
+Q: If we decide to take the input and interpret it as a 2’s Complement number, what inputs will produce Out1 = 1? Hint: What do the first and last bits of a 2’s Complement number being 1 tell you about the number?
+
+A: It's a negative and odd number.
