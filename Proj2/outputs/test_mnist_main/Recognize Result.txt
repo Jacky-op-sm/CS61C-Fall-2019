@@ -1,0 +1,5 @@
+The recognize results:
+All agree with the labels, except ones that are mentioned in Projects Specifications:
+
+"mnist_input2 and mnist_input7 will be misclassified to 9 and 8 respectively."
+

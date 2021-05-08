@@ -1,0 +1,22 @@
+My own writing recognize results:
+File 		Origin	Result
+Example 	2 	2
+Number4		4	8
+Number9		9	9
+Number3 	3	0
+Number2		2	5
+
+WTF???
+My writing has some problem.
+
+File 	Origin	Result
+2	2	1
+3	3	5
+4	4 	0
+6	6	1
+9	9	0
+
+WTF????
+ALL Wrong. 
+
+I doubt that it's the bmp_to_bin that has some problems, the * position is so wrong when I handwrite. 
