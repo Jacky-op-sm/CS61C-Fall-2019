@@ -1,0 +1,4 @@
+Q: For this circuit, let the propagation delay of an adder block be 50ns, the propagation delay of a multiplication block be 55ns, and the CLK-to-Q delay of a register be 5ns. Assuming no setup time and hold time, calculate the maximum clock rate at which this circuit can operate. 
+
+A: Min of Freq = adder delay + multi delay + CLK-to-Q = 50 + 55 + 5 = 110 ns.
+So the Max clock rate = 1 / Min of Freq = 1 / 110 GHz = 9.091 MHz
