@@ -1,0 +1,54 @@
+Exercise 1:
+
+Checkoff Question 1:
+Because the step size in bytes is the multiple of the block size. Here it's 32 = 8 * 4.
+
+
+Checkoff Question 2:
+Option, a3 : 0 to 1.
+Step size, a1 to 1.
+
+
+Checkoff Question 3:
+Block size here is 16, step size in bytes is 8, which is exactly the half of the block size. So first the compulsory miss, then next 8 is within the block, so a hit. Besides, the option is 1, same access of a memory address will cause a hit. Therefore, it's MHHH.
+
+Checkoff Question 4:
+The cache size is exactly the array size, after the first outer loop, the whole array is in the cache. Therefore, after the first outer loop, there will always be a hit.
+
+
+Checkoff Question 5:
+Say divide the big array into chunks and the chunk size is exactly the cache size.
+And **_** = part, except 2nd is function.
+
+
+Checkoff Question 6:
+Because every time the L1 cache misses, it's a factor of 8 and thus the total access to L2 is 128 / 8 = 16, which is equal to its block number. So, after the first outer loop, every data needed is actually in L2, but never used.
+
+
+Exercise 1:
+
+Checkoff Question 3:
+For ijk, we stride through the matrices with respect to the innermost loop by C:0, A:n, B:1. And since order doesn't matter, it's roughly equal to jik.
+
+For ikj, same analysis, C:n, A:0, B:n. roughly equal to kij.
+
+For jki, same analysis, C:1, A:1, B:0. roughly equal to kji.
+
+So from the size of the stride, we know that jki is the one that use the most of temporal and spacial locality, that's why it's the fastest. And for ikj, it's exactly the lowest one because it strides too many.
+
+
+Exercise 3:
+
+Checkoff Question 1:
+when n = 1000, the execution of these two versions actually are nearly equal.
+When n = 2000, cache blocked version is much faster.
+
+Checkoff Question 2: 
+Require certain number: Because when n is relatively small, the cache of system may be able to store the whole array in our cache, so the native version could also make use of locality.
+
+Why be faster: when n gets large, remember we have a fixed number of blocks, in y direction, if we hit n value into our cache, certainly it will kick out many values, thus when x increment by one, the spacial locality is not used. But if we hit block size of values, we make sure many values won't be kicked out, thus they can be used later.
+
+
+Checkoff Question 3:
+When block size increases, first it gets faster and then it becomes slower.
+Reason for this: after explaining the "Why be faster" part of question 2, this is easy. We access block size per 1 increment of x, when block size = n, it is actually the native version. If we don't want many values kicked out, we shall keep the block size in suitable range.
