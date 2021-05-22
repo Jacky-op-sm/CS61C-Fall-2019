@@ -1,0 +1,23 @@
+Exercise 1:
+    1.32 / 4 = 8
+    2.4,6,0,6
+    3.no,no
+
+Why no page hits?
+Because here the number of pages in PM is equal to the one in the TLB. Every access that can be found in PM will be found in TLB thus there is no page hits.
+
+Exercise 2:
+    1.0F,2F,4F,6F,8F,0F,2F,4F,6F,AF
+
+Exercise 3:
+    1.Physical Memory
+
+--- lines below are ignored by the AG ---
+
+Exercise 1 Checkoff Questions:
+    1.When accessing a virtual address, first it looks up in the TLB, if TLB misses, it will then look up in the page table, if the corresponding page index has an invalid bit, then it's a page fault. Therefore, it needs to go to disk and bring that into an available physical memory. And the corresponding page number in the PM will be recorded into the PG and TLB. Then one access cycle is done.
+    2.The reason of 2 bit for PPN is that the physical memory only has 4 pages. But the visual memory has 8 pages, which is 3 bits.
+
+Exercise 4 Checkoff Question:
+    1. Here the setup is different from the the camera, there are multiple processor in the system, namely P1 - P4. They share the same TLB and Physical Memory but not the Page Table. 
+    2. Explain why there is a higher TLB miss rate: Because every time there is a "context switch", aka process switch, the TLB shall be invalidated for the original part. 
