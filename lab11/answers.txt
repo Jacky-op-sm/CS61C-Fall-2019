@@ -1,0 +1,26 @@
+Exercise 1:
+1.Four floating point divisions in single precision (i.e. float):
+__m128 _mm_div_ps (__m128 a, __m128 b)
+
+2.Sixteen max operations over signed 8-bit integers:
+__m128i _mm_max_epi8 (__m128i a, __m128i b)
+
+3.Arithmetic shift right of eight signed 16-bit integers (i.e. short):
+__m128i _mm_sll_epi16 (__m128i a, __m128i count)
+
+
+Exercise 3:
+The testing result:
+Let's generate a randomized array.
+Starting randomized sum.
+Time taken: 30.690337 s
+Sum: 410833256448
+Starting randomized unrolled sum.
+Time taken: 22.712824 s
+Sum: 410833256448
+Starting randomized SIMD sum.
+Time taken: 6.536878 s
+Sum: 410833256448
+Starting randomized SIMD unrolled sum.
+Time taken: 4.883886 s
+Sum: 410833256448
