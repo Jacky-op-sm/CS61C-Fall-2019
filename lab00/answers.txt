@@ -1,0 +1,9 @@
+1.mv
+2.chmod
+3.pwd
+4.ping
+5.find
+6.ps
+7.kill
+8.diff
+9.stat | ls -ld
