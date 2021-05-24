@@ -1,0 +1,66 @@
+Exercise 1:
+./hello 
+ hello world 2
+ hello world 1
+ hello world 4
+ hello world 3
+ hello world 7
+ hello world 5
+ hello world 0
+ hello world 6
+
+Exercise 2:
+make v_add && ./v_add
+Optimized adjacent: 1 thread(s) took 1.323468 seconds
+Optimized adjacent: 2 thread(s) took 1.152435 seconds
+Optimized adjacent: 3 thread(s) took 1.053518 seconds
+Optimized adjacent: 4 thread(s) took 1.124208 seconds
+Optimized adjacent: 5 thread(s) took 1.348672 seconds
+Optimized adjacent: 6 thread(s) took 1.515989 seconds
+Optimized adjacent: 7 thread(s) took 1.614797 seconds
+Optimized adjacent: 8 thread(s) took 1.847656 seconds
+Optimized chunks: 1 thread(s) took 0.918057 seconds
+Optimized chunks: 2 thread(s) took 0.448714 seconds
+Optimized chunks: 3 thread(s) took 0.299993 seconds
+Optimized chunks: 4 thread(s) took 0.244195 seconds
+Optimized chunks: 5 thread(s) took 0.257108 seconds
+Optimized chunks: 6 thread(s) took 0.280676 seconds
+Optimized chunks: 7 thread(s) took 0.277796 seconds
+Optimized chunks: 8 thread(s) took 0.245611 seconds
+Naive: 1 thread(s) took 0.887723 seconds
+Naive: 2 thread(s) took 0.932566 seconds
+Naive: 3 thread(s) took 0.951543 seconds
+Naive: 4 thread(s) took 0.973296 seconds
+Naive: 5 thread(s) took 1.043086 seconds
+Naive: 6 thread(s) took 1.168328 seconds
+Naive: 7 thread(s) took 1.406374 seconds
+Naive: 8 thread(s) took 1.589659 seconds
+
+Checkoff question:
+Which version of your code runs faster, chunks or adjacent? What do you think the reason for this is? Explain to the person checking you off.
+
+A: Chunk version runs faster. By the hint that the adjacent version will cause false sharing because if two processors get its own cache and they both need to modify a data in one cache block, that is when read-modify-write problem happen. The data in main memory are inconsistent with both the cache in each processor.
+
+
+Exercise 3:
+Manual Optimized: 1 thread(s) took 0.822443 seconds
+Manual Optimized: 2 thread(s) took 0.420166 seconds
+Manual Optimized: 3 thread(s) took 0.290505 seconds
+Manual Optimized: 4 thread(s) took 0.243255 seconds
+Manual Optimized: 5 thread(s) took 0.232923 seconds
+Manual Optimized: 6 thread(s) took 0.201969 seconds
+Manual Optimized: 7 thread(s) took 0.185007 seconds
+Manual Optimized: 8 thread(s) took 0.179116 seconds
+Reduction Optimized: 1 thread(s) took 0.933089 seconds
+Reduction Optimized: 2 thread(s) took 0.929705 seconds
+Reduction Optimized: 3 thread(s) took 0.925014 seconds
+Reduction Optimized: 4 thread(s) took 0.929144 seconds
+Reduction Optimized: 5 thread(s) took 0.931953 seconds
+Reduction Optimized: 6 thread(s) took 0.929289 seconds
+Reduction Optimized: 7 thread(s) took 0.929605 seconds
+Reduction Optimized: 8 thread(s) took 0.923988 seconds
+Naive: 1 thread took 5.427092 seconds
+
+Part II:
+#include <sys/prctl.h> 
+This library does not exist on MacOS.
