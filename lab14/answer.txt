@@ -1,0 +1,8 @@
+Given these two statements:
+
+1.Be aware, this lab is only going to work on Hive machines.
+
+2.$ conda create --name lab14env python=2.7
+
+It's a pity that I can't finish this one last lab even though I feel I am quite qualified and able to accomplish it. In the last discussion, I learned how to write map and reduce function, based on the concept of telling which is key and which is value. But the fact is that I still get constrained. So, such a pity.
+
