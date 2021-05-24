@@ -63,4 +63,4 @@ Naive: 1 thread took 5.427092 seconds
 
 Part II:
 #include <sys/prctl.h> 
-This library does not exist on MacOS.
+This library does not exist on MacOS. So I just don't do it. But 2019 fall version doesn't include this part as well. So ...
